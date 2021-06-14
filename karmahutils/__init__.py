@@ -14,7 +14,7 @@ from sklearn import preprocessing
 import itertools
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
-version_info = "v1.17"
+version_info = "v1.18"
 version_type = 'moonshade library'
 authors = ['Yann Girard', 'Bastien Clausier', 'Afaf Ghazi']
 contact = 'yann.girard@gmail.com'
@@ -22,6 +22,10 @@ lib_name = 'karmahutils'
 purpose = """This lib contains most of the useful quality of life functions
 used in my everyday coding life.It used to be the standalone of the karmah function series.
 It has been shared in various projects I have been involved in."""
+
+
+def split_me(data, batch_size=2):
+    return [df for g, df in data.groupby(np.arange(len(data)) // batch_size)]
 
 
 def load_info(library_name=lib_name, build=version_info):

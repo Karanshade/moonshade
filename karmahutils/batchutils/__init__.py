@@ -93,7 +93,7 @@ def batch_me(
     else:
         print('nothing left to batch')
 
-    for batch_df in split_me(data=remaining_data, batch_size=batch_size):
+    for batch_df in kut.split_me(data=remaining_data, batch_size=batch_size):
         current_batch += 1
 
         for instruction in instructions:
