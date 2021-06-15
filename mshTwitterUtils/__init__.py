@@ -7,11 +7,11 @@ from nltk.corpus import stopwords
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 # ML-NLP
-import tensorflow as tf
-
-assert tf.__version__ >= "2.0"
 from transformers import AutoTokenizer, TFAutoModelForSequenceClassification, pipeline
+import tensorflow as tf
+assert tf.__version__ >= "2.0"
 
+# model used initialized at start
 tokenizer = AutoTokenizer.from_pretrained("tblard/tf-allocine", use_fast=True)
 model = TFAutoModelForSequenceClassification.from_pretrained("tblard/tf-allocine")
 nlp = pipeline('sentiment-analysis', model=model, tokenizer=tokenizer)
