@@ -324,6 +324,20 @@ def to_camelcase(a_string):
 
 
 def display_message(message, other_lines=None, line_sep='*', side_sep='*', secondary=False, no_return=True):
+    """
+    QoL function aiming at making  a line visible in an otherwise dense log,usually to pinpoint a step change.
+    ********************
+    *  step 1 starting *
+    ********************
+
+    :param message: The message to highlight
+    :param other_lines: Other lines not usually used
+    :param line_sep: the chars used for graphical uderlight (default *)
+    :param side_sep: the chars used for side (default *)
+    :param secondary: shortcut to change the the line sep to '_'
+    :param no_return: the function will not return anything (sometimes I need a print as well)
+    :return: usually nothing :)
+    """
     if secondary:
         line_sep = '-'
         side_sep = ''
