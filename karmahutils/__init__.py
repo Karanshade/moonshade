@@ -14,11 +14,11 @@ from sklearn import preprocessing
 import itertools
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
-version_info = "v1.18"
+version_info = "v1.19"
 version_type = 'moonshade library'
 authors = ['Yann Girard', 'Bastien Clausier', 'Afaf Ghazi']
 contact = 'yann.girard@gmail.com'
-lib_name = 'numpyutils'
+lib_name = "karmahutils"
 purpose = """This lib contains most of the useful quality of life functions
 used in my everyday coding life.It used to be the standalone of the karmah function series.
 It has been shared in various projects I have been involved in."""
