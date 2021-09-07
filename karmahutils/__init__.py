@@ -15,7 +15,7 @@ import itertools
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 version_info = "v1.19"
-version_type = 'moonshade library'
+version_type = 'moonshade open library'
 authors = ['Yann Girard', 'Bastien Clausier', 'Afaf Ghazi']
 contact = 'yann.girard@gmail.com'
 lib_name = "karmahutils"

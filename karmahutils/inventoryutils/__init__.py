@@ -20,8 +20,26 @@ def parse_columns_date(
         origin='unix',
         cache=True,
         inplace=False,
-        silent_mode=True
+        silent_mode=True,
 ):
+    """
+    This function parses column date
+    :param data:
+    :param columns:
+    :param errors:
+    :param first_day:
+    :param first_year:
+    :param utc:
+    :param format:
+    :param exact:
+    :param unit:
+    :param infer_datetime_format:
+    :param origin:
+    :param cache:
+    :param inplace:
+    :param silent_mode:
+    :return:
+    """
     df = data if inplace else data.copy()
     if not silent_mode:
         kut.display_message('parsing dates')
